@@ -2,12 +2,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
 import { Toaster } from "@/components/ui/toaster";
-import { ThemeToggle } from "./components/ThemeToggle";
 
 function App() {
   return (
     <>
-      <ThemeToggle />
       <Toaster />
       <BrowserRouter>
         <Routes>

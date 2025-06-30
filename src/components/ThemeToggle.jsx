@@ -29,20 +29,20 @@ export const ThemeToggle = () => {
   };
 
   return (
-    <button
-      onClick={toggleTheme}
-      className={cn(
-        "fixed z-120 p-2 rounded-full transition-colors duration-300",
-        "top-2 right-5", // Default position (desktop)
-        "sm:top-2 sm:right-5", // Small screens (640px+)
-        "max-sm:bottom-4 max-sm:right-4" // Mobile screens (under 640px)
-      )}
-    >
-      {isDarkMode ? (
-        <Sun className="h-6 w-6 text-yellow-300" />
-      ) : (
-        <Moon className="h-6 w-6 text-blue-900" />
-      )}
-    </button>
+    <div className="fixed top-4 right-5 z-[100]">
+      <button
+        onClick={toggleTheme}
+        className={cn(
+          "fixed p-2 rounded-full transition-colors duration-300",
+          "top-2 right-5 max-md:hidden" // Default position (desktop)
+        )}
+      >
+        {isDarkMode ? (
+          <Sun className="h-6 w-6 text-yellow-300" />
+        ) : (
+          <Moon className="h-6 w-6 text-blue-900" />
+        )}
+      </button>
+    </div>
   );
 };
