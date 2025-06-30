@@ -70,12 +70,16 @@ export const Navbar = () => {
         {/* Mobile Menu Button */}
         <motion.button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden p-2 text-foreground z-50"
+          className="md:hidden p-2 text-foreground z-120"
           aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? (
+            <X size={24} className="text-white" />
+          ) : (
+            <Menu size={24} />
+          )}
         </motion.button>
 
         {/* Mobile Menu */}
@@ -87,7 +91,7 @@ export const Navbar = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className={cn(
-                "fixed inset-0 bg-background/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center",
+                "fixed inset-0 bg-gray-900 text-white z-100 h-screen flex flex-col items-center justify-center",
                 "md:hidden"
               )}
             >
@@ -101,7 +105,7 @@ export const Navbar = () => {
                   <motion.a
                     key={index}
                     href={item.href}
-                    className="text-foreground/80 hover:text-primary transition-colors duration-300 py-2 px-4 rounded-lg"
+                    className="text-white/90 hover:text-white transition-colors duration-300 py-2 px-4 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
