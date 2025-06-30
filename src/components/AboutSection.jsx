@@ -64,7 +64,7 @@ export const AboutSection = () => {
             </h3>
 
             <p className="text-muted-foreground">
-              With over 5 years of experience in web development, I specialize
+              With over 2 years of experience in web development, I specialize
               in creating responsive, accessible, and performant web
               applications using modern technologies.
             </p>
@@ -76,7 +76,7 @@ export const AboutSection = () => {
               landscape.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col items-center justify-center sm:flex-row gap-4 pt-4">
               <motion.a
                 href="#contact"
                 className="cosmic-button hover:scale-105 transition-transform"
