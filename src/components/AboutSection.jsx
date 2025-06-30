@@ -59,9 +59,7 @@ export const AboutSection = () => {
             variants={fadeInVariants}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Creator
-            </h3>
+            <h3 className="text-2xl font-semibold">Passionate Web Developer</h3>
 
             <p className="text-muted-foreground">
               With over 2 years of experience in web development, I specialize
